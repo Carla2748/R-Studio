@@ -130,7 +130,7 @@ head(ds)
 2.  Make a panel plot containing a time series plot (i.e. \color{red}{\verb|type = "l"|}type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis)
 
 ```{r, echo=TRUE}
-ggplot(ds, aes(interval, steps, col=wDay)) + geom_line() +
+ggplot(ds, aes(interval, steps, col=wDay)) + geom_line() + facet_grid(~wDay)
     xlab("Intervals") + ylab("Frequency of steps")
 ```
 
